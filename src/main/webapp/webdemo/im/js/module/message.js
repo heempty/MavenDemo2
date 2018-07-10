@@ -122,7 +122,7 @@ YX.fn.initEmoji = function() {
       pinupList: pinupList, //贴图
       width: 500,
       height: 300,
-      imgpath: './images/',
+      imgpath: '/webdemo/im/images/',
       callback: function(result) {
         that.cbShowEmoji(result);
       }

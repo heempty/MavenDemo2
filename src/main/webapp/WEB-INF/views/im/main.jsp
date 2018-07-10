@@ -6,18 +6,18 @@ pageEncoding="UTF-8"%>
 <head>
 	<meta charset="UTF-8" />
 	<title>云信 Web Demo</title>
-	<link rel="stylesheet" href="css/base.css" />
-	<link rel="stylesheet" href="css/animate.css" />
-	<link rel="stylesheet" href="css/jquery-ui.css" />
-	<link rel="stylesheet" href="css/contextMenu/jquery.contextMenu.css" />
-	<link rel="stylesheet" href="css/minAlert.css" />
-	<link rel="stylesheet" href="css/main.css" />
-	<link rel="stylesheet" href="css/uiKit.css" />
-	<link rel="stylesheet" href="css/CEmojiEngine.css" />
-	<link rel="stylesheet" href="css/rangeslider.css" />
-	<link rel="stylesheet" href="css/pure-min.css">
-	<link rel="stylesheet" href="css/whiteboard.css" />
-	<link rel="icon" href="images/icon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="../../webdemo/im/css/base.css" />
+	<link rel="stylesheet" href="../../webdemo/im/css/animate.css" />
+	<link rel="stylesheet" href="../../webdemo/im/css/jquery-ui.css" />
+	<link rel="stylesheet" href="../../webdemo/im/css/contextMenu/jquery.contextMenu.css" />
+	<link rel="stylesheet" href="../../webdemo/im/css/minAlert.css" />
+	<link rel="stylesheet" href="../../webdemo/im/css/main.css" />
+	<link rel="stylesheet" href="../../webdemo/im/css/uiKit.css" />
+	<link rel="stylesheet" href="../../webdemo/im/css/CEmojiEngine.css" />
+	<link rel="stylesheet" href="../../webdemo/im/css/rangeslider.css" />
+	<link rel="stylesheet" href="../../webdemo/im/css/pure-min.css">
+	<link rel="stylesheet" href="../../webdemo/im/css/whiteboard.css" />
+	<link rel="icon" href="../../webdemo/im/images/icon.ico" type="image/x-icon" />
 	<style>
 		.test_div{
 			position: relative;
@@ -52,7 +52,7 @@ pageEncoding="UTF-8"%>
 					<img src="" alt="" width="56" height="56" class="radius-circle avatar" id="userPic" />
 					<span id="userName">&nbsp;</span>
 					<span>
-						<img src="images/pen.png" class="u-modify" id="showMyInfo">
+						<img src="../../webdemo/im/images/pen.png" class="u-modify" id="showMyInfo">
 					</span>
 					<span class="exit" title="退出" id="logout">退出</span>
 				</div>
@@ -75,7 +75,7 @@ pageEncoding="UTF-8"%>
 						<div class="m-panel">
 							<div class="panel_item m-sysMsg" id="showNotice">
 								<div class="panel_avatar">
-									<img class="panel_image" src="images/notice.png" alt="消息中心" />
+									<img class="panel_image" src="../../webdemo/im/images/notice.png" alt="消息中心" />
 								</div>
 								<div class="panel_text">
 									<p class="panel_single-row">消息中心</p>
@@ -305,7 +305,9 @@ pageEncoding="UTF-8"%>
 					<div class="u-chat-notice">您已退出</div>
 					<div class="chat-mask"></div>
 					<div class="chat-editor box-sizing" id="chatEditor" data-disabled="1">
-						<div id="emojiTag" class="m-emojiTag"></div>
+						<div id="emojiTag" class="m-emojiTag">
+
+						</div>
 						<a class="chat-btn u-emoji" id="showEmoji"></a>
 						<span class="chat-btn msg-type" id="chooseFileBtn">
 							<a class="icon icon-file" data-type="file"></a>
@@ -380,7 +382,7 @@ pageEncoding="UTF-8"%>
 			<div class="notice">你不会接收到列表中联系人的任何消息</div>
 			<ul class="f-cb list">
 				<li class="items f-cb">
-					<img src="images/default-icon.png" class="head">
+					<img src="../../webdemo/im/images/default-icon.png" class="head">
 					<span class="nick">未知</span>
 					<button class="btn radius4px btn-ok j-rm">解除</button>
 				</li>
@@ -411,7 +413,7 @@ pageEncoding="UTF-8"%>
 			<div class="content tc">
 				<input type="text" class="ipt radius5px box-sizing j-account" placeholder="请输入群id" />
 				<div class="info f-cb">
-					<img src="images/advanced.png">
+					<img src="../../webdemo/im/images/advanced.png">
 					<div class="desc">
 						<p class="j-name"></p>
 						<p>
@@ -514,21 +516,21 @@ pageEncoding="UTF-8"%>
 		<ul>
 			<li class="mutelist">消息提醒
 				<div class="u-switch">
-					<img src="images/btn_switch.png">
+					<img src="../../webdemo/im/images/btn_switch.png">
 					<span class="off">off</span>
 					<span class="on">on</span>
 				</div>
 			</li>
 			<li class="blacklist">黑名单
 				<div class="u-switch">
-					<img src="images/btn_switch.png">
+					<img src="../../webdemo/im/images/btn_switch.png">
 					<span class="off">off</span>
 					<span class="on">on</span>
 				</div>
 			</li>
 			<li class="mute hide" id="setTeamMute">设置禁言
 				<div class="u-switch">
-					<img src="images/btn_switch.png">
+					<img src="../../webdemo/im/images/btn_switch.png">
 					<span class="off">off</span>
 					<span class="on">on</span>
 				</div>
@@ -661,15 +663,15 @@ pageEncoding="UTF-8"%>
 			}
 		}
 	</script>
-	<script src="../3rd/nim_server_conf.js"></script>
-	<script src="../3rd/NIM_Web_SDK_v5.2.0.js"></script>
-	<script src="../3rd/NIM_Web_Netcall_v5.2.0.js"></script>
-	<script src="../3rd/NIM_Web_WebRTC_v5.2.0.js"></script>
-	<script src="../3rd/NIM_Web_WhiteBoard_v5.2.0.js"></script>
-	<script src="../3rd/DrawPlugin.js"></script>
+	<script src="../../webdemo/3rd/nim_server_conf.js"></script>
+	<script src="../../webdemo/3rd/NIM_Web_SDK_v5.2.0.js"></script>
+	<script src="../../webdemo/3rd/NIM_Web_Netcall_v5.2.0.js"></script>
+	<script src="../../webdemo/3rd/NIM_Web_WebRTC_v5.2.0.js"></script>
+	<script src="../../webdemo/3rd/NIM_Web_WhiteBoard_v5.2.0.js"></script>
+	<script src="../../webdemo/3rd/DrawPlugin.js"></script>
 
-	<script src="./js/3rd/whiteboard.js"></script>
-	<script src="../3rd/jquery-1.11.3.min.js"></script>
+	<script src="../../webdemo/im/js/3rd/whiteboard.js"></script>
+	<script src="../../webdemo/3rd/jquery-1.11.3.min.js"></script>
 	<!--<script src="../3rd/zepto.min.js"></script>-->
 	<script>
 		// FastClick.attach(document.body);
@@ -695,43 +697,43 @@ pageEncoding="UTF-8"%>
 	</script>
 
 	<!-- <script src="../3rd/platform.js"></script> -->
-	<script src="../3rd/rtcSupport.js"></script>
-	<script src="js/3rd/jquery-ui.min.js"></script>
-	<script src="../3rd/rangeslider.min.js"></script>
+	<script src="../../webdemo/3rd/rtcSupport.js"></script>
+	<script src="../../webdemo/im/js/3rd/jquery-ui.min.js"></script>
+	<script src="../../webdemo/3rd/rangeslider.min.js"></script>
 	<!-- 右键菜单-->
-	<script src="js/3rd/contextMenu/jquery.ui.position.js"></script>
-	<script src="js/3rd/contextMenu/jquery.contextMenu.js"></script>
+	<script src="../../webdemo/im/js/3rd/contextMenu/jquery.ui.position.js"></script>
+	<script src="../../webdemo/im/js/3rd/contextMenu/jquery.contextMenu.js"></script>
 	
-	<script src="js/config.js"></script>
-	<script src="js/md5.js"></script>
+	<script src="../../webdemo/im/js/config.js"></script>
+	<script src="../../webdemo/im/js/md5.js"></script>
 	
-	<script src="js/emoji.js"></script>
-	<script src="js/util.js?v=2"></script>
-	<script src="js/cache.js?v=2"></script>
-	<script src="js/link.js"></script>
-	<script src="js/ui.js?v=2"></script>
+	<script src="../../webdemo/im/js/emoji.js"></script>
+	<script src="../../webdemo/im/js/util.js?v=2"></script>
+	<script src="../../webdemo/im/js/cache.js?v=2"></script>
+	<script src="../../webdemo/im/js/link.js"></script>
+	<script src="../../webdemo/im/js/ui.js?v=2"></script>
 	
 	
-	<script src="js/widget/uiKit.js?v=2"></script>
-	<script src="js/widget/minAlert.js"></script>
-	<script src="js/module/base.js"></script>
-	<script src="js/module/message.js"></script>
-	<script src="js/module/sysMsg.js"></script>
-	<script src="js/module/personCard.js"></script>
-	<script src="js/module/session.js"></script>
-	<script src="js/module/friend.js"></script>
+	<script src="../../webdemo/im/js/widget/uiKit.js?v=2"></script>
+	<script src="../../webdemo/im/js/widget/minAlert.js"></script>
+	<script src="../../webdemo/im/js/module/base.js"></script>
+	<script src="../../webdemo/im/js/module/message.js"></script>
+	<script src="../../webdemo/im/js/module/sysMsg.js"></script>
+	<script src="../../webdemo/im/js/module/personCard.js"></script>
+	<script src="../../webdemo/im/js/module/session.js"></script>
+	<script src="../../webdemo/im/js/module/friend.js"></script>
 
 
-	<script src="js/module/team.js"></script>
-	<script src="js/module/dialog_team.js"></script>
-	<script src="js/module/cloudMsg.js"></script>
-	<script src="js/module/notification.js"></script>
-	<script src="js/module/netcall.js"></script>
-	<script src="js/module/netcall_meeting.js"></script>
-	<script src="js/module/netcall_ui.js"></script>
-	<script src="js/module/dialog_call_method.js"></script>
-	<script src="js/main.js?v=2"></script>
-	<script src="../3rd/vue.min.js"></script>
+	<script src="../../webdemo/im/js/module/team.js"></script>
+	<script src="../../webdemo/im/js/module/dialog_team.js"></script>
+	<script src="../../webdemo/im/js/module/cloudMsg.js"></script>
+	<script src="../../webdemo/im/js/module/notification.js"></script>
+	<script src="../../webdemo/im/js/module/netcall.js"></script>
+	<script src="../../webdemo/im/js/module/netcall_meeting.js"></script>
+	<script src="../../webdemo/im/js/module/netcall_ui.js"></script>
+	<script src="../../webdemo/im/js/module/dialog_call_method.js"></script>
+	<script src="../../webdemo/im/js/main.js?v=2"></script>
+	<script src="../../webdemo/3rd/vue.min.js"></script>
 	<script id="whiteboard-template" type="text/x-template">
 		<div v-show="display" class="function-box whiteboard">
 			<div v-if="banner.length" class="whiteboard-banner">
@@ -807,7 +809,7 @@ pageEncoding="UTF-8"%>
 			<div class="dialogs"></div>
 		</div>
 	</script>
-	<script src="js/module/whiteboard.js"></script>
+	<script src="../../webdemo/im/js/module/whiteboard.js"></script>
 </body>
 
 </html>

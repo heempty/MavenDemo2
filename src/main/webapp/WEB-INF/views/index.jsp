@@ -22,5 +22,7 @@
 		</table>
 	</form>
 	<a href="./alipay_index.jsp">去支付页面</a>
+
+	<a href="index/to_im_index.do">去IM页面</a>
 </body>
 </html>

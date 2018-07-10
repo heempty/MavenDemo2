@@ -42,4 +42,15 @@ public class indexController {
 		
 		return new ModelAndView("alipay_index");
 	}
+
+	@RequestMapping(value = "to_im_index")
+	public ModelAndView to_im_index(HttpServletRequest request, HttpServletResponse response) {
+		log.info("this is test------------");
+		System.out.println("test to_im_index----->>>");
+//		modelAndView.setViewName("index2");
+
+//		List<sequence> list = indexTest.getSequence();
+
+		return new ModelAndView("im/main");
+	}
 }

@@ -98,12 +98,13 @@ CEmojiEngine.prototype.__initXGui = function(emNode,emConfig){
 
 CEmojiEngine.prototype.__renderChangeCol = function(){
 	for(var i in this._emojiList){
+		console.log('-------','_emojiList')
 		var emojiList = this._emojiList[i];
 		for(var key in emojiList){
 			var span = document.createElement('span');
 			span.id = 'chn-emoji-'+i;	
 			var img = new Image();
-			img.src = "./images/"+emojiList[key]['file'];
+			img.src = "/webdemo/im/images/"+emojiList[key]['file'];
 			span.appendChild(img);
 			this._changeColumn.appendChild(span);			
 			break;
@@ -117,6 +118,7 @@ CEmojiEngine.prototype.__renderChangeCol = function(){
 		var span = document.createElement('span');
 		span.id = 'chn-pinup-'+i;
 		var img = new Image();
+		comsole.log('-----',pinupList[0])
 		img.src = "./images/"+ pinupList[0];
 		span.appendChild(img);
 		this._changeColumn.appendChild(span);		

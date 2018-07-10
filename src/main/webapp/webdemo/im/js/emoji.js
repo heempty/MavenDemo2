@@ -32,7 +32,7 @@ function buildEmoji(text) {
 	var matches = text.match(re) || [];
 	for (var j = 0, len = matches.length; j < len; ++j) {
 		if(emoji[matches[j]]){
-			text = text.replace(matches[j], '<img class="emoji" src="images/emoji/' + emoji[matches[j]].file + '" />');
+			text = text.replace(matches[j], '<img class="emoji" src="/webdemo/im/images/emoji/' + emoji[matches[j]].file + '" />');
 		}		
 	}
 	return text;
@@ -91,6 +91,7 @@ CEmojiEngine.prototype.__initXGui = function(emNode,emConfig){
 	this._changeColumn.className = 'm-emoji-chnCol-ul';
 	this._changeColumn.style.width = 'auto';
 	this._changeColumn.style.height= '50px';
+	console.log('=================',this._changeColumn)
 	tmpdiv.appendChild(this._changeColumn);
 
 	emNode.appendChild(this._parentNode);
@@ -103,7 +104,8 @@ CEmojiEngine.prototype.__renderChangeCol = function(){
 			var span = document.createElement('span');
 			span.id = 'chn-emoji-'+i;	
 			var img = new Image();
-			img.src = "./images/"+emojiList[key]['file'];
+            console.log('========3',emojiList[key]['file'])
+			img.src = "/webdemo/im/images/"+emojiList[key]['file'];
 			span.appendChild(img);
 			this._changeColumn.appendChild(span);			
 			break;
@@ -117,7 +119,8 @@ CEmojiEngine.prototype.__renderChangeCol = function(){
 		var span = document.createElement('span');
 		span.id = 'chn-pinup-'+i;
 		var img = new Image();
-		img.src = "./images/"+ pinupList[0];
+        console.log('========4',pinupList[0])
+		img.src = "/webdemo/im/images/"+ pinupList[0];
 		span.appendChild(img);
 		this._changeColumn.appendChild(span);		
 	}
@@ -135,6 +138,7 @@ CEmojiEngine.prototype.__renderPictureCol= function(){
 			span.style.width = this._lWidth+'px';
 			span.style.height= 'auto';
 			var img = new Image();
+			console.log('========1',this._imgpath,subtype)
 			img.src = this._imgpath +subtype+ '/'+ emojiList[key]['file'];
 			span.appendChild(img);
 			this._pictureColumn.appendChild(span);		
@@ -148,6 +152,7 @@ CEmojiEngine.prototype.__renderPictureCol= function(){
 			span.style.width = this._hWidth+'px';
 			span.style.height= 'auto';
 			var img = new Image();
+            console.log('========2',this._imgpath,subtype)
 			img.src = this._imgpath +subtype+ '/'+pinupList[key];
 			span.appendChild(img);
 			this._pictureColumn.appendChild(span);		

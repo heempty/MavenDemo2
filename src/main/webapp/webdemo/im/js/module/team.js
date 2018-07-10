@@ -248,7 +248,7 @@ YX.fn.doTeamAdd = function () {
 ********************************************************************/
 YX.fn.showTeamInfo = function () {
 	var that = this
-	this.$teamInfoContainer.load('./teamInfo.html', function () {
+	this.$teamInfoContainer.load('/webdemo/im/teamInfo.html', function () {
 		// 获取群成员
 		var teamId = that.crtSessionAccount,
 			teamInfo = that.cache.getTeamById(teamId)
@@ -278,7 +278,7 @@ YX.fn.showTeamInfo = function () {
 				//其本信息
 				that.$teamInfoContainer.removeClass("normal").find('.j-advanced').removeClass("hide")
 				$teamDesc.find('.name').text(intro)
-				var avatarUrl = teamInfo.avatar ? (teamInfo.avatar + "?imageView&thumbnail=40y40") : "images/advanced.png"
+				var avatarUrl = teamInfo.avatar ? (teamInfo.avatar + "?imageView&thumbnail=40y40") : "/webdemo/im/images/advanced.png"
 				$teamAvatar[0].src = avatarUrl
 				if (myTeamInfo.type === "owner" || (myTeamInfo.type === "manager")) {
 					that.$teamInfoContainer.find('.j-joinMode[value=' + joinMode + ']').attr("checked", 'checked')
@@ -308,7 +308,7 @@ YX.fn.showTeamInfo = function () {
 				that.$teamInfoContainer.addClass("normal").find('.j-exitTeam').text("退出讨论组")
 				$teamName.addClass('owner')
 				$teamDesc.addClass('owner')
-				$teamAvatar[0].src = "images/normal.png"
+				$teamAvatar[0].src = "/webdemo/im/images/normal.png"
 			}
 		}
 		$teamName.find('.name').text(teamName)

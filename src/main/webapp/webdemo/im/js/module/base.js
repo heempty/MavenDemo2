@@ -143,7 +143,7 @@ YX.fn.openChatBox = function(account, scene) {
     info = this.cache.getUserById(account);
     if (info.account == userUID) {
       this.$nickName.text('我的手机');
-      this.$chatTitle.find('img').attr('src', 'images/myPhone.png');
+      this.$chatTitle.find('img').attr('src', '/webdemo/im/images/myPhone.png');
     } else {
       if (window.CONFIG.openSubscription) {
         var multiPortStatus = this.cache.getMultiPortStatus(account);
@@ -172,13 +172,13 @@ YX.fn.openChatBox = function(account, scene) {
           .find('img')
           .attr('src', info.avatar + '?imageView&thumbnail=80x80&quality=85');
       } else {
-        this.$chatTitle.find('img').attr('src', 'images/' + info.type + '.png');
+        this.$chatTitle.find('img').attr('src', '/webdemo/im/images/' + info.type + '.png');
       }
       this.$nickName.text(info.name);
     } else {
       this.$rightPanel.find('.u-chat-notice').removeClass('hide');
       this.$rightPanel.find('.chat-mask').removeClass('hide');
-      this.$chatTitle.find('img').attr('src', 'images/normal.png');
+      this.$chatTitle.find('img').attr('src', '/webdemo/im/images/normal.png');
       this.$nickName.text(account);
     }
     this.getTeamMembers(account, function() {
@@ -296,7 +296,7 @@ YX.fn.infoProvider = function(data, type) {
         //点对点
         if (msg.target === userUID) {
           info.nick = '我的手机';
-          info.avatar = 'images/myPhone.png';
+          info.avatar = '/webdemo/im/images/myPhone.png';
         } else {
           var userInfo = this.cache.getUserById(msg.target);
           info.nick = this.getNick(msg.target);
@@ -311,11 +311,11 @@ YX.fn.infoProvider = function(data, type) {
             info.avatar =
               teamInfo.avatar + '?imageView&thumbnail=40x40&quality=85';
           } else {
-            info.avatar = 'images/' + teamInfo.type + '.png';
+            info.avatar = '/webdemo/im/images/' + teamInfo.type + '.png';
           }
         } else {
           info.nick = msg.target;
-          info.avatar = 'images/normal.png';
+          info.avatar = '/webdemo/im/images/normal.png';
         }
       }
       break;
@@ -335,7 +335,7 @@ YX.fn.infoProvider = function(data, type) {
         info.avatar = data.avatar + '?imageView&thumbnail=40x40&quality=85';
       } else {
         info.avatar =
-          info.type === 'normal' ? 'images/normal.png' : 'images/advanced.png';
+          info.type === 'normal' ? '/webdemo/im/images/normal.png' : '/webdemo/im/images/advanced.png';
       }
       info.crtSession = this.crtSession;
       break;

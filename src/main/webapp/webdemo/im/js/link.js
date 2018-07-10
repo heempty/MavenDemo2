@@ -228,7 +228,7 @@ var SDKBridge = function(ctr, data) {
         title = "hello",
         contents = "66666"
         // url="http://";
-    this.controller.sendCustomMessageToUser2(to,title,contents);
+    // this.controller.sendCustomMessageToUser2(to,title,contents);
     ctr.initInfo(this.person, this.team);
 
   }

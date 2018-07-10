@@ -88,7 +88,7 @@ var page = {
             'emojiList':emojiList,  //普通表情
             'width': 350,
             'height':300,
-            'imgpath':'./images/',     
+            'imgpath':'/webdemo/im/images/',
             'callback':function(result){        
                 that.cbShowEmoji(result);
             }

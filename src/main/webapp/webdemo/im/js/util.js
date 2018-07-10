@@ -269,7 +269,7 @@ function getMessage(msg) {
             } else if (content.type === 3) {
                 var catalog = _$escape(content.data.catalog),
                     chartvar = _$escape(content.data.chartlet);
-                str = '<img class="chartlet" onload="loadImg()" src="./images/' + catalog + '/' + chartvar + '.png">';
+                str = '<img class="chartlet" onload="loadImg()" src="/webdemo/im/images/' + catalog + '/' + chartvar + '.png">';
             } else if (content.type == 4) {
                 str = msg.fromNick + '发起了[白板互动]';
             } else {
@@ -659,7 +659,7 @@ function getAvatar(url) {
         })
         return url + "?imageView&thumbnail=80x80&quality=85";
     } else {
-        return url || "images/default-icon.png"
+        return url || "/webdemo/im/images/default-icon.png"
     }
 }
 
